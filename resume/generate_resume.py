@@ -48,6 +48,17 @@ VARIANT_KEYWORDS = {
         "rag-fusion", "rag fusion", "hybrid search", "reranking", "rerank",
         "multi-hop reasoning", "graph traversal",
     ],
+    "Prakhar-Goyal-Resume-Future-MultiAgentDebate.md": [
+        "multi-agent debate", "debate", "reflexion", "self-critique",
+        "critique and revise", "bull", "bear", "judge agent",
+        "multi-agent collaboration", "supervisor agent", "hierarchical agent",
+        "agent team", "orchestration", "collaborative agents",
+    ],
+    "Prakhar-Goyal-Resume-Future-CareerOpsAgent.md": [
+        "pii", "pii sanitization", "pii redaction", "resume", "job description",
+        "jd parsing", "fit scoring", "applicant tracking", "career", "ats",
+        "resume tailoring", "interview prep", "document rag", "pdf qa",
+    ],
     "Prakhar-Goyal-Resume-GenAI-2026.md": [
         "rag", "retrieval augmented generation", "langchain", "prompt engineering",
         "llm application", "generative ai", "genai", "openai", "claude",

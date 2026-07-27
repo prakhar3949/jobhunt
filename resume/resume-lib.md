@@ -120,6 +120,24 @@ Role subtitle (the `**bold**` line right after `# Prakhar Goyal`) changes per va
 - Built a deep-agent research platform (LangChain `deepagents`) with a **4-subagent team**, custom **middleware** (context compression, prompt caching), **persistent BaseStore memory**, and a full **AgentOps layer** — guardrails, RAGAS evals, tracing, and cost monitoring.
 ```
 
+### P-MultiAgent-Debate — "Bull/Bear Thesis Debate Agents" → anchors **Future-MultiAgentDebate** variant
+Pattern adapted from [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) — `agents/20-multi-agent-debate` and LangGraph's official "Multi-Agent Collaboration" / "Reflexion" tutorials — applied to the AI-hedgefund domain instead of copied as-is.
+```
+### Applied AI Project — Bull/Bear Thesis Debate Agents · 2026
+- Built a **multi-agent debate system (LangGraph)** — a Bull agent and Bear agent argue opposing investment theses on a ticker using the existing 30+ tool suite, with a Judge agent scoring argument strength and producing a balanced research memo.
+- Added a **reflexion loop**: each agent critiques and revises its own prior argument round before the next, instead of a single-shot take.
+- Reused the **HITL approval gate** pattern from the multi-agent research platform before publishing the final memo.
+```
+
+### P-CareerOps-Agent — "Career-Ops Resume & Fit-Scoring Agent" → anchors **Future-CareerOpsAgent** variant
+Pattern adapted from [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) industry use case **NextRole** ("tailors a resume to a JD and generates interview prep via a multi-agent system") and `agents/21-pii-sanitization-agent` — extends the JD→resume `generate_resume.py` tool already shipped in this repo into a real multi-agent LangGraph system.
+```
+### Applied AI Project — Career-Ops Resume & Fit-Scoring Agent · 2026
+- Extended a keyword-matching JD→resume generator into a **multi-agent LangGraph system**: a JD-parsing agent extracts requirements, a fit-scoring agent weighs them against a resume component library, and an assembly agent drafts the tailored resume + a battlecard of gaps to address.
+- Added a **PII-sanitization guardrail** stage before any JD/resume text is sent to an LLM provider, and **persistent memory** of past applications/outcomes to improve future fit-scoring.
+- Grounded a PDF/document RAG stage over past job descriptions and interview notes (pattern from a PDF-QA agent), enabling "have I seen a role like this before?" queries.
+```
+
 ---
 
 ## 7. Variant map
@@ -129,7 +147,11 @@ Role subtitle (the `**bold**` line right after `# Prakhar Goyal`) changes per va
 | `Prakhar-Goyal-Resume-Future-RAGReliability.md` | GenAI Engineer — RAG Reliability, Evaluation & Safety | P-Reliable-RAG | Yes | GenAI core, RAG architectures (CRAG-focused), Eval/Observability, Guardrails, LLM Gateways |
 | `Prakhar-Goyal-Resume-Future-AgenticMemory.md` | AI Engineer — Agentic Systems & Applied GenAI | P-Agentic-Memory | Yes | GenAI core, RAG architectures (agentic/persistent-memory-focused), Agent Orchestration, Eval/Guardrails/Gateway (condensed) |
 | `Prakhar-Goyal-Resume-Future-ModularGraphRAG.md` | GenAI Engineer — Knowledge Systems & RAG Architecture | P-Modular-GraphRAG | Yes | GenAI core, RAG architectures (modular/GraphRAG-focused), Cloud & Data (Neo4j emphasis) |
+| `Prakhar-Goyal-Resume-Future-MultiAgentDebate.md` | AI Engineer — Multi-Agent Systems & Applied Finance AI | P-MultiAgent-Debate | Yes | GenAI core, Agent Orchestration, Eval/Guardrails (condensed) |
+| `Prakhar-Goyal-Resume-Future-CareerOpsAgent.md` | AI Engineer — Applied Agentic Tooling | P-CareerOps-Agent | Yes | GenAI core, RAG architectures (condensed), Agent Orchestration, Guardrails (PII focus), Persistent memory |
 | `Prakhar-Goyal-Resume-GenAI-2026.md` (existing, current) | Current-state GenAI resume — do not touch until P1–P4 actually ship | — (current AI-hedgefund line only) | No | current |
 | `Prakhar-Goyal-Resume-SeniorDS-2026.md` (existing, current) | Current-state Senior DS resume | — | No | current |
 
-**Important:** the three `Future-*` variants describe projects **not yet built** (P1/P2/P3/P4/P7 in `genai-skill-roadmap.md` are still open). Do not send these out until the corresponding project has a real repo + demo — swap "2026" project dates and bullet specifics for actuals once shipped, and move the file out of "Future" naming at that point.
+**Important:** all `Future-*` variants describe projects **not yet built** (P1/P2/P3/P4/P7 in `genai-skill-roadmap.md`, plus P-MultiAgent-Debate and P-CareerOps-Agent, are still open). Do not send these out until the corresponding project has a real repo + demo — swap "2026" project dates and bullet specifics for actuals once shipped, and move the file out of "Future" naming at that point.
+
+**Source reference:** [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) is a curated list of 500+ agent project patterns across LangGraph/CrewAI/AutoGen/Agno. Two blocks above (P-MultiAgent-Debate, P-CareerOps-Agent) adapt patterns from it to Prakhar's own finance/job-hunt domain — they are **not** claims of having built or contributed to that repo itself. Its `agents/` folder (self-contained runnable examples: PDF-QA, SQL-query, data-analysis, stock-research, PII-sanitization, multi-agent-debate, etc.) and its LangGraph framework table (official Adaptive/Agentic/Corrective/Self-RAG tutorial notebooks) are also useful **reference code** for the P-Reliable-RAG / P-Agentic-Memory / P-Modular-GraphRAG projects above when actually building them.
