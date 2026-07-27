@@ -13,7 +13,7 @@ Senior data scientist with **9+ years** delivering high-impact ML across retenti
 ## Core Skills
 **Machine Learning:** Forecasting & time series (ARIMA, UCM), gradient boosting (LightGBM, XGBoost), BTYD/CLV modeling, SVM, random forests, recommendation/collaborative filtering, clustering, A/B testing, nonlinear optimization, NLP (TF-IDF), CNNs
 **MLOps & Engineering:** MLflow, Azure Data Factory (ADF), Terraform (IaC), Databricks, CI/CD for ML, model monitoring/alerting, PySpark, Python, SQL, Snowflake
-**Generative AI / LLM:** RAG pipelines, LLM application & agent design, prompt engineering, Claude & OpenAI APIs, tool-use/function-calling
+**Generative AI / LLM:** RAG pipelines, LLM application & agent design, ReAct agentic AI frameworks (LangGraph), prompt engineering, Claude & OpenAI APIs, tool-use/function-calling
 **Cloud & Data:** Azure, Databricks, Snowflake, MSSQL, large-scale data mining, Tableau
 
 ---
